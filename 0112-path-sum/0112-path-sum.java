@@ -14,30 +14,30 @@
  * }
  */
 class Solution {
-    ArrayList<Integer> arr=new ArrayList<Integer>();
-    void gennum(TreeNode root,int curr){
+    int f=0;
+    boolean b=false;
+    void gennum(TreeNode root,int curr,int target){
         if(root.left==null && root.right==null){
             curr+=root.val;
-            arr.add(curr);
+            
+            if(curr==target && f==0){
+            b=true;
+            f=1;}
             return;
         }
         curr+=root.val;
         if(root.left!=null)
-        gennum(root.left,curr);
+        gennum(root.left,curr,target);
         if(root.right!=null)
-        gennum(root.right,curr);
+        gennum(root.right,curr,target);
     }
     public boolean hasPathSum(TreeNode root, int targetSum) {
         if(root==null)
         {
             return false;
         }
-        gennum(root,0);
-        for(int i=0;i<arr.size();i++){
-            if(arr.get(i)==targetSum)
-            return true;
-            // System.out.print(arr.get(i)+" ");
-        }
-        return false;
+        gennum(root,0,targetSum);
+
+        return b;
     }
 }
