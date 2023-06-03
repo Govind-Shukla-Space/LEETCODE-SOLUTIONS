@@ -12,34 +12,28 @@ class Solution {
         pos[k1++]=i;
         int possum[]=new int[one];
         possum[0]=pos[0];
-        for(int i=1;i<possum.length;i++){
+        for(int i=1;i<pos.length;i++)
         possum[i]=pos[i]+possum[i-1];
-        }
-        int a=0,b=k-1;
-        int min=Integer.MAX_VALUE;
+        int a=0,b=k-1,lex=0;
+        int max=Integer.MAX_VALUE;
         while(b<pos.length){
-            int res=0,lsum,rsum;
+            int res=0;
             int mid=(int)((a+b)/2);
             int rd=mid-a;
-            if(k%2!=0){
-                // rsum=(possum[b]-possum[mid]);
-                // lsum=(mid==0?0:possum[mid-1])-(a==0?0:possum[a-1])-rd*(rd+1);
-                // res=rsum-lsum;
-                res=(possum[b]-possum[mid])-((mid==0?0:possum[mid-1])-(a==0?0:possum[a-1]))-rd*(rd+1);
-                // max=Math.min(max,res);
-            }
-            else{
-                // rsum=(possum[b]-possum[mid]);
-                // lsum=(mid==0?0:possum[mid-1])-(a==0?0:possum[a-1])-possum[mid]-rd*(rd+1)-(rd+1);
-                // res=rsum-lsum;
-                // max=Math.min(max,res);
-                res=(possum[b]-possum[mid])-((mid==0?0:possum[mid-1])-(a==0?0:possum[a-1]))-pos[mid]-rd*(rd+1)-(rd+1);
-            }
-            min=Math.min(min,res);
+            int rsum=(possum[b]-possum[mid]);
+            int lsum=(mid==0?0:possum[mid-1])-(a==0?0:possum[a-1]);
+            if(k%2==0)
+            lsum+=pos[mid];
+            int range=rd*(rd+1);
+            if(k%2==0)
+            range+=(rd+1);
+            res=rsum-lsum-range;
+            // System.out.println(rsum+" "+lsum+" "+" "+range+" "+res);
+            max=Math.min(max,res);
             a+=1;
             b+=1;
         }
         // System.out.println(max);
-        return (int)min;
+        return (int)max;
     }
 }
