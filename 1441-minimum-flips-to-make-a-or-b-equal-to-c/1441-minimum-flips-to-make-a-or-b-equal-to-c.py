@@ -13,17 +13,8 @@ class Solution:
         s1=add(s1,l-len(s1))
         s2=add(s2,l-len(s2))
         s3=add(s3,l-len(s3))
-        # if len(s1)>len(s2):
-        # s2=add(s2,len(s1)-len(s2))
-        # s3=add(s3,len(s1)-len(s3))
-        # # else:
-        # s1=add(s1,len(s2)-len(s1))
-        # s3=add(s3,len(s2)-len(s3))
         lo=[]
         lz=[]
-        print(s1)
-        print(s2)
-        print(s3)
         for i in range(len(s3)):
             if s3[i]=='1':
                 lo.append(i)
@@ -37,6 +28,4 @@ class Solution:
                 c1+=2
             elif s1[j]=='1' or s2[j]=='1':
                 c1+=1
-        # print(s1)
-        # print(s2)
         return c1
