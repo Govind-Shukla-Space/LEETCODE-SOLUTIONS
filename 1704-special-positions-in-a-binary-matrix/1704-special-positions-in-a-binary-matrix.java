@@ -1,28 +1,34 @@
 class Solution {
-    boolean fun(int i,int j,int arr[][]){
-        int r=0,c=0;
-        for(int col=0;col<arr[0].length;col++){
-            if(arr[i][j]==1&&arr[i][col]==1)
-            r++;
+    int m,n;
+    boolean isSpecial(int i,int j,int[][] mat)
+    {
+        if (mat[i][j]!=1)
+            return false ;
+        for(int col=0;col<n;col++)
+        {
+            if (col!=j && mat[i][col]==1)
+            return false;
         }
-        for(int row=0;row<arr.length;row++){
-            if(arr[i][j]==1&&arr[row][j]==1)
-            c++;
+        for(int row=0;row<m;row++)
+        {
+            if (row!=i && mat[row][j]==1)
+            return false;
         }
-        // System.out.println(r+" "+c);
-        if(r==1 && c==1)
         return true;
-        else
-        return false;
     }
     public int numSpecial(int[][] mat) {
+        m=mat.length;
+        n=mat[0].length;
         int c=0;
-        for(int i=0;i<mat.length;i++){
-            for(int j=0;j<mat[0].length;j++){
-                if (fun(i,j,mat))
-                c+=1;
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+            if (isSpecial(i,j,mat))
+            c+=1;
             }
         }
         return c;
     }
+    
 }
