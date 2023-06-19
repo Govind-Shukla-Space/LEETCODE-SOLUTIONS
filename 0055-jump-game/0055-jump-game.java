@@ -42,7 +42,7 @@ class Solution2 {
         return jump(0,nums,dp);
     }
 }
-class Solution {
+class Solution3 {
     //pure dp
     boolean jump(int nums[],boolean dp[]){
         // return true;
@@ -70,5 +70,18 @@ class Solution {
         for(int i=0;i<dp.length;i++)
         dp[i]=false;
         return jump(nums,dp);
+    }
+}
+class Solution{
+    public boolean canJump(int[] nums) {
+        int n=nums.length;
+        int goal=n-1;
+        for(int i=n-2;i>=0;i--){
+            if ((i+nums[i])>=goal)
+            goal=i;
+        }
+        if(goal==0)
+        return true;
+        return false;
     }
 }
