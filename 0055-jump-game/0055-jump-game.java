@@ -44,10 +44,7 @@ class Solution2 {
 }
 class Solution {
     //pure dp
-    boolean jump(int pos,int nums[],boolean dp[]){
-        if(pos==nums.length-1){
-            dp[pos]=true;
-        }
+    boolean jump(int nums[],boolean dp[]){
         // return true;
         int n=nums.length;
         dp[n-1]=true;
@@ -56,8 +53,10 @@ class Solution {
             int far=Math.min(n-1,i+nums[i]);
             for(int j=i+1;j<=far;j++){
                 if (dp[j]==true)
-                {dp[i]=true;
-                break;}
+                {
+                    dp[i]=true;
+                    break;
+                }
             }
             if(dp[i]!=true)
             dp[i]=false;
@@ -65,9 +64,11 @@ class Solution {
         return dp[0];
     }
     public boolean canJump(int[] nums) {
+        if(nums.length==1)
+        return true;
         boolean dp[]=new boolean[nums.length];
         for(int i=0;i<dp.length;i++)
         dp[i]=false;
-        return jump(0,nums,dp);
+        return jump(nums,dp);
     }
 }
