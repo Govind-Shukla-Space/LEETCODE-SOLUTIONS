@@ -73,6 +73,7 @@ class Solution3 {
     }
 }
 class Solution{
+    //O(n)time,O(1)space
     public boolean canJump(int[] nums) {
         int n=nums.length;
         int goal=n-1;
