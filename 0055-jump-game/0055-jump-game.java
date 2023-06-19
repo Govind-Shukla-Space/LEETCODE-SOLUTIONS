@@ -56,7 +56,8 @@ class Solution {
             int far=Math.min(n-1,i+nums[i]);
             for(int j=i+1;j<=far;j++){
                 if (dp[j]==true)
-                dp[i]=true;
+                {dp[i]=true;
+                break;}
             }
             if(dp[i]!=true)
             dp[i]=false;
