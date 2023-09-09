@@ -10,13 +10,9 @@
  */
 class Solution {
     int gdivisor(int a,int b){
-        int q=a>b?b:a;
-        int c=1;
-        for(int i=1;i<=q;i++){
-            if(a%i==0&&b%i==0)
-            c=i;
-        }
-        return c;
+        if(b==0)
+        return a;
+        return gdivisor(b,a%b);
     }
     public ListNode insertGreatestCommonDivisors(ListNode head) {
         ListNode t1=head;
