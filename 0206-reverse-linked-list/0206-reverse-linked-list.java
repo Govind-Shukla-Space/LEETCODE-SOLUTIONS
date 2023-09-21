@@ -20,7 +20,7 @@ class Solution1 {
         return pre;
     }
 }
-class Solution {
+class Solution2 {
     ListNode reverse(ListNode head){
         if(head==null||head.next==null)
         return head;
@@ -31,5 +31,26 @@ class Solution {
     }
     public ListNode reverseList(ListNode head) {
         return reverse(head);
+    }
+}
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode ptr=null,t=head,f=null;
+        while(t!=null){
+            f=t.next;
+            if(ptr==null)
+            {
+                t.next=null;
+                ptr=t;
+                t=f;
+            }
+            else
+            {
+                t.next=ptr;
+                ptr=t;
+                t=f;
+            }
+        }
+        return ptr;
     }
 }
