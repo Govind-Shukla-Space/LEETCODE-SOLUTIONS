@@ -14,33 +14,14 @@
  * }
  */
 class Solution {
-    TreeNode getRightMost(TreeNode leftnode,TreeNode curr){
-        while (leftnode.right!=null && leftnode.right!=curr)
-            leftnode=leftnode.right;
-        return leftnode;
-    }
+    
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> arr=new ArrayList<Integer>();
-        TreeNode curr=root;
-        while(curr!=null){
-            TreeNode leftnode=curr.left;
-            if(leftnode==null){
-                arr.add(curr.val);
-                curr=curr.right;
-            }
-            else{
-                TreeNode rightmost=getRightMost(leftnode,curr);
-                if(rightmost.right==null){
-                    rightmost.right=curr;
-                    curr=curr.left;
-                }
-                else{
-                    rightmost.right=null;
-                    arr.add(curr.val);
-                    curr=curr.right;
-                }
-            }
-        }
-        return arr;
+        ArrayList<Integer> ar=new ArrayList<Integer>();
+        if (root==null)
+        return ar;
+        ar.addAll(inorderTraversal(root.left));
+        ar.add(root.val);
+        ar.addAll(inorderTraversal(root.right));
+        return ar;
     }
 }
