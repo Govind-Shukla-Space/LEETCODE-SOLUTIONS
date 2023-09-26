@@ -9,20 +9,19 @@
  */
 
 class Solution {
-     TreeNode res=null;
-    void search(final TreeNode or, final TreeNode cl, final TreeNode tar){
-        if(or==null)
-        return;
+    TreeNode res=null;
+    TreeNode search(final TreeNode or, final TreeNode cl, final TreeNode tar){
+        if(or==null||cl==null)
+        return null;
         if(or.val==tar.val){
-            res=cl;
-            return;
+            return cl;
         }
-        
-        search(or.left,cl.left,tar);
-        search(or.right,cl.right,tar);
+        TreeNode left=search(or.left,cl.left,tar);
+        if(left!=null)
+        return left;
+        return search(or.right,cl.right,tar);
     }
     public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
-        search(original,cloned,target);
-        return res;
+        return search(original,cloned,target);
     }
 }
