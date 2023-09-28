@@ -91,7 +91,7 @@ class Solution {
         ListNode hah=getmiddle(head);
         ListNode left=mergesort(head);
         ListNode right=mergesort(hah);
-        return itermerge(left,right);
+        return recurmerge(left,right);
     }
     public ListNode sortList(ListNode head) {
         // System.out.println(getmiddle(head));
