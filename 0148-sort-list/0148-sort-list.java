@@ -64,16 +64,20 @@ class Solution {
         return l2;
         if(l2==null)
         return l1;
-        ListNode res=null;
+       
         if(l1.val<=l2.val){
+             ListNode res=null;
             res=l1;
             res.next=recurmerge(l1.next,l2);
+             return res;
         }
         else{
+             ListNode res=null;
              res=l2;
             res.next=recurmerge(l1,l2.next);
+             return res;
         }
-        return res;
+       
     }
     ListNode getmiddle(ListNode head){
         ListNode s=head,f=head;
