@@ -62,6 +62,8 @@ class Solution{
         return 0;
         Queue<TreeNode> q=new LinkedList<TreeNode>();
         q.add(root);
+        if(root.left==null&&root.right==null)
+        return 1;
         int level=1;
         while(!q.isEmpty()){
             int l=q.size();
@@ -80,6 +82,6 @@ class Solution{
             }
             level+=1;
         }
-        return level-1;
+        return 0;
     }
 }
