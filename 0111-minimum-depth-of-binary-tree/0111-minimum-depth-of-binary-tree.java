@@ -32,7 +32,7 @@ class Solution1 {
     }
 }
 
-class Solution{
+class Solution2{
     
     int fun(TreeNode root){
         if(root.left==null&&root.right==null){
@@ -53,5 +53,33 @@ class Solution{
         if(root==null)
         return 0;
         return fun(root);
+    }
+}
+
+class Solution{
+    public int minDepth(TreeNode root) {
+        if (root==null)
+        return 0;
+        Queue<TreeNode> q=new LinkedList<TreeNode>();
+        q.add(root);
+        int level=1;
+        while(!q.isEmpty()){
+            int l=q.size();
+            for (int i=0;i<l;i++){
+                TreeNode t=q.poll();
+                if(t.left!=null){
+                    if(t.left.left==null&&t.left.right==null)
+                    return level+1;
+                    q.add(t.left);
+                }
+                if(t.right!=null){
+                    if(t.right.left==null&&t.right.right==null)
+                    return level+1;
+                    q.add(t.right);
+                }
+            }
+            level+=1;
+        }
+        return level-1;
     }
 }
