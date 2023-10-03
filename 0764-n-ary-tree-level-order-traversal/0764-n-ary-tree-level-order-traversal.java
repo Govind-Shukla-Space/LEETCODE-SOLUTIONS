@@ -31,7 +31,6 @@ class Solution {
                 Node t=q.poll();
                 
                 for(int j=0;j<t.children.size();j++){
-                    if(t.children.get(j)!=null)
                         q.add(t.children.get(j));
                 }
                 ar.add(t.val);
