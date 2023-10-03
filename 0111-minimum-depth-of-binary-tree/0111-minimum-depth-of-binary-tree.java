@@ -13,10 +13,10 @@
  *     }
  * }
  */
-class Solution1 {
+class Solution {
     int min=Integer.MAX_VALUE;
     void fun(TreeNode root,int c){
-        if(root.left==null||root.right==null){
+        if(root.left==null&&root.right==null){
             c+=1;
             min=Math.min(c,min);
         }
@@ -27,12 +27,14 @@ class Solution1 {
         fun(root.right,c);
     }
     public int minDepth(TreeNode root) {
+        if(root==null)
+        return 0;
         fun(root,0);
         return min;
     }
 }
 
-class Solution2{
+class Solution1{
     
     int fun(TreeNode root){
         if(root.left==null&&root.right==null){
@@ -56,7 +58,7 @@ class Solution2{
     }
 }
 
-class Solution{
+class Solution2{
     public int minDepth(TreeNode root) {
         if (root==null)
         return 0;
