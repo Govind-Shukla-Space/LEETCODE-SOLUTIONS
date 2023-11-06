@@ -1,53 +1,65 @@
+// O(n^3)
 class Solution1 {
     public int maxSubArray(int[] nums) {
-        int c1=0;
-        for(int i=0;i<nums.length;i++)
-        {
-            if(nums[i]<0)
-            c1+=1;
-        }
-        if(c1==nums.length)
-        {
-            int z=nums[0];
-            for(int i=0;i<c1;i++)
-            {
-                if(nums[i]>z)
-                z=nums[i];
-            }
-            return z;
-        }
-        int c=0,max=0;
+        int n=nums.length;
+        int max=Integer.MIN_VALUE;
         for(int i=0;i<nums.length;i++){
-            c=c+nums[i];
-            if(c>max){
-                max=c;
+            for(int j=i;j<nums.length;j++){
+                int sum=0;
+                for(int k=i;k<=j;k++)
+                sum+=nums[k];
+                max=Math.max(max,sum);
             }
-            if (c<0)
-            c=0;
         }
         return max;
-        
-        // return -1;
+    }
+}
+// O(n^2)
+class Solution2 {
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+            int sum=0;
+            for(int j=i;j<nums.length;j++){
+                sum+=nums[j];
+                max=Math.max(max,sum);
+            }
+        }
+        return max;
+    }
+}
+// O(n^2)time O(n)space
+class Solution3 {
+    public int maxSubArray(int[] nums) {
+        int n=nums.length;
+        int max=Integer.MIN_VALUE;
+        int ps[]=new int[n];
+        ps[0]=nums[0];
+        for(int i=1;i<n;i++){
+            ps[i]=ps[i-1]+nums[i];
+        }
+        for(int i=0;i<nums.length;i++){
+            for(int j=i;j<nums.length;j++){
+                int sum=(i==0)?ps[j]:(ps[j]-ps[i-1]);
+                max=Math.max(max,sum);
+            }
+        }
+        return max;
     }
 }
 class Solution {
-    int k=0,tm=0,pm=Integer.MIN_VALUE;
-    int max(int i,int nums[]){
-        if(i<nums.length-1)
-        k=max(i+1,nums);
-        if(tm+nums[i]<0)
-        {
-            tm=0;
-            pm=Math.max(pm,nums[i]);
-        }
-        else{
-            tm+=nums[i];
-            pm=Math.max(pm,tm);
-        }
-        return tm;
-    }
     public int maxSubArray(int[] nums) {
-        int c=max(0,nums);
-        return pm;
+        int n=nums.length;
+        int max=Integer.MIN_VALUE;
+        int ps=0,low=0;
+        // ps[0]=nums[0];
+        for(int i=0;i<n;i++){
+            ps+=nums[i];
+            max=Math.max(max,ps-low);
+            if (ps<low)
+            low=ps;
+        }
+        return max;
     }
 }
