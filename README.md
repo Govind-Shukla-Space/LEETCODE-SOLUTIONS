@@ -15,3 +15,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0409-longest-palindrome](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0409-longest-palindrome) |
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Database
+|  |
+| ------- |
+| [0180-consecutive-numbers](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0180-consecutive-numbers) |
+<!---LeetCode Topics End-->
