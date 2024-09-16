@@ -21,5 +21,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0180-consecutive-numbers](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0180-consecutive-numbers) |
+| [1182-game-play-analysis-iv](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1182-game-play-analysis-iv) |
 | [2041-the-latest-login-in-2020](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/2041-the-latest-login-in-2020) |
 <!---LeetCode Topics End-->
