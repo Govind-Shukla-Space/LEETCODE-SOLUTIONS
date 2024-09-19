@@ -6,8 +6,8 @@ class Solution {
     }
     public List<Integer> diffWaysToCompute(String expression) {
         List<Integer> arr=new ArrayList<Integer>();
-        // if(expression.charAt(0)=='-')
-        //     expression="0"+expression;
+        if(expression.charAt(0)=='-')
+            expression="0"+expression;
         if (expression.matches("\\d+")) {
             arr.add(Integer.parseInt(expression));
             return arr;
