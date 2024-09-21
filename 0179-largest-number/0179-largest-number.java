@@ -1,8 +1,6 @@
 import java.math.BigInteger;
 class Solution {
     String fun(String a,String b){
-        if(b=="")
-            return a;
         // long a1=Long.parseLong(a);
         // long b1=Long.parseLong(b);
         BigInteger a1 = new BigInteger(a);  
