@@ -24,4 +24,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1182-game-play-analysis-iv](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1182-game-play-analysis-iv) |
 | [1317-monthly-transactions-i](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1317-monthly-transactions-i) |
 | [2041-the-latest-login-in-2020](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/2041-the-latest-login-in-2020) |
+## String
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0020-valid-parentheses) |
+## Stack
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
