@@ -13,7 +13,7 @@ class Solution1 {//tle
         return ans;
     }
 }
-class Solution {
+class Solution2 {
     public int[] productExceptSelf(int[] nums) {
         int ans[]=new int[nums.length];
         int suff[]=new int [nums.length];
@@ -28,6 +28,24 @@ class Solution {
         }
         for(int i=0;i<nums.length;i++)
         ans[i]=pre[i]*suff[i];
+        return ans;
+    }
+}
+class Solution{
+    public int[] productExceptSelf(int[] nums) {
+        int n=nums.length;
+        int ans[]=new int[n];
+        Arrays.fill(ans,1);
+        int p=1;
+        for(int i=0;i<n;i++){
+            ans[i]*=p;
+            p*=nums[i];
+        }
+        p=1;
+        for(int i=n-1;i>=0;i--){
+            ans[i]*=p;
+            p*=nums[i];
+        }
         return ans;
     }
 }
