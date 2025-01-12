@@ -36,8 +36,13 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0238-product-of-array-except-self) |
+| [1121-partition-array-for-maximum-sum](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1121-partition-array-for-maximum-sum) |
 ## Prefix Sum
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0238-product-of-array-except-self) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1121-partition-array-for-maximum-sum](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1121-partition-array-for-maximum-sum) |
 <!---LeetCode Topics End-->
