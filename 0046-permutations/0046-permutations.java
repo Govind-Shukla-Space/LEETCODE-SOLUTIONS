@@ -1,26 +1,24 @@
 class Solution {
-    void search(int nums[],List<Integer> sub,List<List<Integer>> all,boolean bool[]){
-        if(sub.size()==nums.length)
-        all.add(new ArrayList<>(sub));
-        else{
-            for(int i=0;i<nums.length;i++){
-                if(bool[i]){
-                    bool[i]=false;
-                    sub.add(nums[i]);
-                    search(nums,sub,all,bool);
-                    sub.remove(sub.size()-1);
-                    bool[i]=true;
-                }
+    public void backtrack(int []nums,boolean []bool,List<Integer> temp,List<List<Integer>> result){
+        if(temp.size()== nums.length){
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int j=0;j<nums.length;j++){
+            if( !bool[j]){
+                bool[j]=true;
+                temp.add(nums[j]);
+                backtrack(nums,bool,temp,result);
+                temp.remove(temp.size()-1);
+                bool[j]=false;
             }
         }
     }
     public List<List<Integer>> permute(int[] nums) {
-        List<Integer> sub=new ArrayList<Integer>();
-        List<List<Integer>> all=new ArrayList<List<Integer>>();
+        List<List<Integer>> result= new ArrayList<List<Integer>>();
+        List<Integer> temp=new ArrayList<Integer>();
         boolean bool[]=new boolean[nums.length];
-        for(int i=0;i<nums.length;i++)
-        bool[i]=true;
-        search(nums,sub,all,bool);
-        return all;
+        backtrack(nums,bool,temp,result);
+        return result;
     }
 }
