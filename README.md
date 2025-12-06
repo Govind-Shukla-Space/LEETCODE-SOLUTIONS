@@ -36,6 +36,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0046-permutations](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0046-permutations) |
 | [0238-product-of-array-except-self](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0238-product-of-array-except-self) |
 | [1121-partition-array-for-maximum-sum](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1121-partition-array-for-maximum-sum) |
 ## Prefix Sum
@@ -46,4 +47,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1121-partition-array-for-maximum-sum](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1121-partition-array-for-maximum-sum) |
+## Backtracking
+|  |
+| ------- |
+| [0046-permutations](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0046-permutations) |
 <!---LeetCode Topics End-->
