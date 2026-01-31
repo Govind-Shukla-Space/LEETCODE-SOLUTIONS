@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0046-permutations](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0046-permutations) |
 | [0238-product-of-array-except-self](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0238-product-of-array-except-self) |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0744-find-smallest-letter-greater-than-target) |
 | [1121-partition-array-for-maximum-sum](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/1121-partition-array-for-maximum-sum) |
 ## Prefix Sum
 |  |
@@ -51,4 +52,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0046-permutations](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0046-permutations) |
+## Binary Search
+|  |
+| ------- |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0744-find-smallest-letter-greater-than-target) |
 <!---LeetCode Topics End-->
