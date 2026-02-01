@@ -56,4 +56,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0744-find-smallest-letter-greater-than-target](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0744-find-smallest-letter-greater-than-target) |
+## Math
+|  |
+| ------- |
+| [0263-ugly-number](https://github.com/Govind-Shukla-Space/LEETCODE-SOLUTIONS/tree/master/0263-ugly-number) |
 <!---LeetCode Topics End-->
